@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "content_requests",
+  "info": {
+    "singularName": "content-request",
+    "pluralName": "content-requests",
+    "displayName": "Content Request",
+    "description": "Stores competitor URLs and parameters for content generation"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "competitorUrls": {
+      "type": "text",
+      "required": true
+    },
+    "keywords": {
+      "type": "text"
+    },
+    "toneOfVoice": {
+      "type": "enumeration",
+      "enum": [
+        "Formal",
+        "Informal",
+        "Professional",
+        "Friendly"
+      ]
+    },
+    "targetAudience": {
+      "type": "text"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "Pending",
+        "Processing",
+        "Generating",
+        "Review",
+        "Failed",
+        "Completed"
+      ],
+      "default": "Pending",
+      "required": true
+    },
+    "errorMessage": {
+      "type": "text"
+    },
+    "generatedArticle": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::article.article",
+      "inversedBy": "relatedRequest"
+    }
+  }
+} 
