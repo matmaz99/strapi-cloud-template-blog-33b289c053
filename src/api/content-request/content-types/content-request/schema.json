@@ -41,9 +41,7 @@
         "Review",
         "Failed",
         "Completed"
-      ],
-      "default": "Pending",
-      "required": true
+      ]
     },
     "errorMessage": {
       "type": "text"
