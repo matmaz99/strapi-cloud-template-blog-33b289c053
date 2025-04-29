@@ -33,6 +33,7 @@
     },
     "status": {
       "type": "enumeration",
+      "description": "The current processing state of the request",
       "enum": [
         "Pending",
         "Processing",
