@@ -31,17 +31,10 @@
     "targetAudience": {
       "type": "text"
     },
-    "status": {
-      "type": "enumeration",
-      "description": "The current processing state of the request",
-      "enum": [
-        "Pending",
-        "Processing",
-        "Generating",
-        "Review",
-        "Failed",
-        "Completed"
-      ]
+    "requestState": {
+      "type": "string",
+      "description": "The current processing state of the request (e.g., Pending, Processing, Generating, Review, Failed, Completed)",
+      "default": "Pending"
     },
     "errorMessage": {
       "type": "text"
